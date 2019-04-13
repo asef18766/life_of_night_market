@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e56cceb6480d345bc929369860db88, type: 3}
   m_Name: CD02
   m_EditorClassIdentifier: 
-  int_Value_: 0
-  f_Risk_: 0
+  int_Value_: 2
+  f_Risk_: 2
   sprite_CardArt_: {fileID: 0}

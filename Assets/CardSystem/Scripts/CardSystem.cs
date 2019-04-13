@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CardSystem : MonoBehaviour
 {
-
     public GameObject gObj_Yamafuda_;
     public GameObject gObj_Tefuda_;
     public GameObject Prefab_Card_;
-    public int[] i_PlayerCardNumber_;
+    //[玩家,手持卡片序號]
+    public int[] i_WhoseCardCount_;
     public int i_thisTimeYouDraw_;
     public CardDataPool m_CDP_;
 
@@ -16,8 +16,8 @@ public class CardSystem : MonoBehaviour
     {
         gObj_Yamafuda_ = GameObject.Find("Yamafuda");
         gObj_Tefuda_ = GameObject.Find("Tefuda");
-}
-
+    }
+    
     public void DrawCard()
     {
         int i = m_CDP_.CDPool_.ToArray().Length;
@@ -25,12 +25,13 @@ public class CardSystem : MonoBehaviour
         GameObject NewCard_ = Instantiate(Prefab_Card_,gObj_Tefuda_.transform);
         NewCard_.GetComponent<CardRefer>().PrintCard(i_thisTimeYouDraw_,m_CDP_);
 
-        gObj_Yamafuda_.SetActive(false);
+        //gObj_Yamafuda_.SetActive(false);
     }
 
     public void ShowTefuda(string PlayerID)
     {
         gObj_Tefuda_.SetActive(true);
+        Instantiate(Prefab_Card_, gObj_Tefuda_.transform);
     }
 
     public void UsingCard()
@@ -54,7 +55,6 @@ public class CardSystem : MonoBehaviour
     
     public void ShowYamafuda()
     {
-        gObj_Tefuda_.SetActive(true);
+        gObj_Yamafuda_.SetActive(true);
     }
-
 }
