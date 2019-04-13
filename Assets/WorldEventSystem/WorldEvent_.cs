@@ -34,6 +34,7 @@ public class WorldEvent_ : MonoBehaviour
         DestoryHouseType_ _dht_event = new DestoryHouseType_();
         _dht_event.pro = 0.05f;
         event_pool.Add(_dht_event);
+        timelock = true;
     }
     I_Event_ getEvent()
     {
@@ -55,20 +56,18 @@ public class WorldEvent_ : MonoBehaviour
         _eve.act(cs, lands);
         return _eve.event_msg;
     }
-    IEnumerator UpdateText(float delaytime)
+    void UpdateText()
     {
         timelock = true;
         string eve = generateEvent();
         GetComponent<Text>().text = eve;
-        Debug.Log("update!!");
-        yield return new WaitForSeconds(delaytime);
-        timelock = false;
     }
-    bool timelock = false;
+    public bool timelock = true;
     void Update()
     {
+        Debug.Log(timelock);
         if (timelock == false)
-            StartCoroutine(UpdateText(1));
+            UpdateText();
 
     }
 }

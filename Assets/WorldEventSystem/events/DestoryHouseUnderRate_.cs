@@ -5,6 +5,10 @@ using UnityEngine;
 public class DestoryHouseUnderRate_:I_Event_
 {
     public float rate_barrier=0.0f;
+    public DestoryHouseUnderRate_()
+    {
+        event_msg="DestoryHouseUnderRate";
+    }
     public override void act(CardSystem cs,Land_[] lands)
     {
         for(int u=0;u!=lands.Length;++u)
