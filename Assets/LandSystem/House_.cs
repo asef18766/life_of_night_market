@@ -19,4 +19,10 @@ public class House_ : MonoBehaviour
     {
         
     }
+    public float get_spirite_height()
+    {
+        Vector3 center= GetComponent<SpriteRenderer>().sprite.bounds.center,
+                pivot =  GetComponent<SpriteRenderer>().sprite.bounds.min;
+        return (center-pivot).y;
+    }
 }
