@@ -55,19 +55,17 @@ public class WorldEvent_ : MonoBehaviour
         _eve.act(cs, lands);
         return _eve.event_msg;
     }
-    IEnumerator UpdateText(float delaytime)
+    void UpdateText()
     {
         timelock = true;
         string eve = generateEvent();
         GetComponent<Text>().text = eve;
-        yield return new WaitForSeconds(delaytime);
-        timelock = false;
     }
-    bool timelock = false;
+    public bool timelock = true;
     void Update()
     {
         if (timelock == false)
-            StartCoroutine(UpdateText(1));
+            UpdateText();
 
     }
 }
