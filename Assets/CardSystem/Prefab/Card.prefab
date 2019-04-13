@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1137930864741632579}
   - component: {fileID: 5025057835456242395}
   - component: {fileID: 1680811861645744439}
-  - component: {fileID: 743155882636233136}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -59,11 +58,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gObj_BeingDrag_: {fileID: 0}
   v2_StartPosit_: {x: 0, y: 0}
-  m_Collider_: {fileID: 0}
   UI_Image_Picture_: {fileID: 0}
   UI_Text_Value_: {fileID: 0}
   UI_Text_Risk_: {fileID: 0}
-  b_IsTouchPannel: 0
 --- !u!61 &1680811861645744439
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -90,27 +87,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 54.057976, y: 85.35127}
   m_EdgeRadius: 0
---- !u!50 &743155882636233136
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137930864741632578}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &1137930865360383611
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,16 +112,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137930865360383611}
-  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalRotation: {x: -0, y: -0, z: -0.00000025331974, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89936, y: 0.89936, z: 0.89936}
+  m_LocalScale: {x: 1.3533534, y: 1.3533534, z: 1.3533534}
   m_Children: []
   m_Father: {fileID: 1137930864741632579}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14, y: -24.800003}
+  m_AnchoredPosition: {x: -13.7, y: -24.800003}
   m_SizeDelta: {x: 7, y: 7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1137930865360383590
@@ -365,7 +341,7 @@ RectTransform:
   m_GameObject: {fileID: 1137930865838983459}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89936, y: 0.89936, z: 0.89936}
+  m_LocalScale: {x: 0.8522066, y: 0.8522066, z: 0.8522066}
   m_Children: []
   m_Father: {fileID: 1137930864741632579}
   m_RootOrder: 5
