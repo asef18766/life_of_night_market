@@ -60,7 +60,6 @@ public class WorldEvent_ : MonoBehaviour
         timelock = true;
         string eve = generateEvent();
         GetComponent<Text>().text = eve;
-        Debug.Log("update!!");
         yield return new WaitForSeconds(delaytime);
         timelock = false;
     }

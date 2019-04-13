@@ -5,6 +5,6 @@ using UnityEngine;
 public abstract class I_Event_
 {
     public float pro=0.0f;
-    public string event_msg="";
-    public abstract void act(CardSystem cs,Land_[] lands);
+    public string event_msg="event";
+    public virtual void act(CardSystem cs,Land_[] lands){}
 }
