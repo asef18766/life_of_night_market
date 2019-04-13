@@ -19,5 +19,10 @@ public class PlayerOperator : MonoBehaviour
         targetFSM.SendEvent("CardFinish");
     }
 
+    public void CheckLandAll()
+    {
+        targetFSM.SendEvent("CheckLandAll");
+    }
+
 
 }
