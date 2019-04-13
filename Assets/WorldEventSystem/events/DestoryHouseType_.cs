@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class DestoryHouseType_:I_Event_
 {
-    public DestoryHouseType_()
-    {
-        event_msg="DestoryHouseType_event";
-    }
     public int HOUSE_TYPE_AMOUNT=0;
     public override void act(CardSystem cs,Land_[] lands)
     {

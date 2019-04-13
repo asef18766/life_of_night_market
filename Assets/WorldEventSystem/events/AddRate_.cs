@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class AddRate_:I_Event_
 {
-    public AddRate_()
-    {
-        event_msg="AddRate";
-    }
     const float min_rate=0.05f;
     const float max_rate=0.3f;
     public override void act(CardSystem cs,Land_[] lands)

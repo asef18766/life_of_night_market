@@ -45,7 +45,11 @@ public class WorldEvent_:MonoBehaviour
         }
         return null;
     }
+<<<<<<< HEAD
    public  string generateEvent()
+=======
+    string generateEvent()
+>>>>>>> parent of 63912a0... complete world events
     {
         CardSystem cs=FindObjectOfType<CardSystem>();
         Land_[] lands=FindObjectsOfType<Land_>();
