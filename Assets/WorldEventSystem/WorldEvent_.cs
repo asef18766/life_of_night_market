@@ -45,7 +45,7 @@ public class WorldEvent_:MonoBehaviour
         }
         return null;
     }
-    string generateEvent()
+   public  string generateEvent()
     {
         CardSystem cs=FindObjectOfType<CardSystem>();
         Land_[] lands=FindObjectsOfType<Land_>();

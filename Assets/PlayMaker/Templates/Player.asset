@@ -279,17 +279,41 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.TriggerEvent
         - HutongGames.PlayMaker.Actions.Wait
+        - HutongGames.PlayMaker.Actions.FindClosest
+        - HutongGames.PlayMaker.Actions.FindClosest
+        - HutongGames.PlayMaker.Actions.GameObjectCompare
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 9c51240048c01101
+        - 
+        - 
+        - 
+        actionEnabled: 0000010101
+        actionIsOpen: 0000010101
+        actionStartIndex: 0000000005000000080000000f00000016000000
+        actionHashCodes: 9c51240048c01101d899af02d899af02ef8d8504
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: Target.Land
+          name: Land.target
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Land.now
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Land.target
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Land.target
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -303,6 +327,30 @@ MonoBehaviour:
             showInInspector: 1
             networkSync: 0
             value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Trigger_Me
+            tooltip: 
+            showInInspector: 1
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Trigger_Front
+            tooltip: 
+            showInInspector: 1
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Land.now
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -310,6 +358,18 @@ MonoBehaviour:
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Road
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Road
         - useVariable: 0
           name: 
           tooltip: 
@@ -327,8 +387,50 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0.01
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -337,12 +439,14 @@ MonoBehaviour:
         stringParams:
         - Move Forward
         - FINISHED
-        byteData: 0100000001
+        - FINISHED
+        - Move Forward
+        byteData: 0100000001000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000070000001200000017000000130000000f0000001700000001000000
+        paramDataType: 14000000070000001200000017000000130000000f000000170000000100000014000000120000001100000011000000130000000f0000000100000014000000120000001100000011000000130000000f00000001000000140000001300000017000000170000001100000001000000
         paramName:
         - gameObject
         - trigger
@@ -352,8 +456,28 @@ MonoBehaviour:
         - time
         - finishEvent
         - realTime
-        paramDataPos: 0000000000000000000000000000000000000000000000000100000004000000
-        paramByteDataSize: 0000000004000000000000000000000000000000000000000000000001000000
+        - gameObject
+        - withTag
+        - ignoreOwner
+        - mustBeVisible
+        - storeObject
+        - storeDistance
+        - everyFrame
+        - gameObject
+        - withTag
+        - ignoreOwner
+        - mustBeVisible
+        - storeObject
+        - storeDistance
+        - everyFrame
+        - gameObjectVariable
+        - compareTo
+        - equalEvent
+        - notEqualEvent
+        - storeResult
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000000000000000000001000000040000000100000001000000000000000100000001000000010000000500000002000000020000000200000003000000020000000200000006000000030000000300000002000000030000000400000007000000
+        paramByteDataSize: 00000000040000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
     - name: Move
       description: 
       colorIndex: 0
@@ -391,7 +515,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: Target.Land
+          name: Land.target
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -649,8 +773,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 695.0156
-        y: 116.96094
+        x: 703.0156
+        y: 123.96094
         width: 100
         height: 32
       isBreakpoint: 0
@@ -677,7 +801,7 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: Target.Land
+          name: Land.target
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -759,14 +883,14 @@ MonoBehaviour:
         paramDataPos: 0000000000000000000000000100000000000000010000000000000000000000
         paramByteDataSize: 0000000000000000000000000000000000000000000000000000000001000000
     - name: State 3
-      description: 
+      description: "\u4E0D\u60F3\u89E3 \u51FA\u932F\u5C31\u88DD\u6B7B\u5427"
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 540
+        x: 552
         y: 113.97656
-        width: 100
-        height: 32
+        width: 121
+        height: 48
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
@@ -779,19 +903,43 @@ MonoBehaviour:
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: still have step ?
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.TriggerEvent
+        - HutongGames.PlayMaker.Actions.FindClosest
+        - HutongGames.PlayMaker.Actions.GameObjectCompare
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 9c512400
+        - 
+        - 
+        actionEnabled: 000101
+        actionIsOpen: 000101
+        actionStartIndex: 00000000050000000c000000
+        actionHashCodes: 9c512400d899af02ef8d8504
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name: Target.Land
+          name: Land.target
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Land.target
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Land.target
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -803,6 +951,22 @@ MonoBehaviour:
             name: Trigger_Left
             tooltip: 
             showInInspector: 1
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Trigger_Left
+            tooltip: 
+            showInInspector: 1
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Land.now
+            tooltip: 
+            showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
         animationCurveParams: []
@@ -818,13 +982,43 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: Road
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Road
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
-        fsmBoolParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -832,20 +1026,35 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - Move_Left
-        byteData: 01000000
+        - FINISHED
+        - Move_Left
+        byteData: 010000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000007000000120000001700000013000000
+        paramDataType: 140000000700000012000000170000001300000014000000120000001100000011000000130000000f00000001000000140000001300000017000000170000001100000001000000
         paramName:
         - gameObject
         - trigger
         - collideTag
         - sendEvent
         - storeCollider
-        paramDataPos: 0000000000000000000000000000000000000000
-        paramByteDataSize: 0000000004000000000000000000000000000000
+        - gameObject
+        - withTag
+        - ignoreOwner
+        - mustBeVisible
+        - storeObject
+        - storeDistance
+        - everyFrame
+        - gameObjectVariable
+        - compareTo
+        - equalEvent
+        - notEqualEvent
+        - storeResult
+        - everyFrame
+        paramDataPos: 000000000000000000000000000000000000000001000000010000000000000001000000010000000000000004000000020000000200000001000000020000000200000005000000
+        paramByteDataSize: 000000000400000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
     - name: State 4
       description: 
       colorIndex: 0
@@ -884,7 +1093,7 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
-            name: Target.Land
+            name: Land.target
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -1151,7 +1360,7 @@ MonoBehaviour:
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
-        name: Target.Land
+        name: Land.target
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -1174,6 +1383,12 @@ MonoBehaviour:
         showInInspector: 1
         networkSync: 0
         value: {fileID: 0}
+      - useVariable: 1
+        name: Land.now
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []
@@ -1181,7 +1396,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
