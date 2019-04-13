@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: KGJ19B
   productName: life_of_night_market
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -618,10 +618,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 15a26190-5fac-42e5-9281-f7a63904b157
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
-  projectName: life_of_night_market
-  organizationId: asef18766
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
