@@ -7,7 +7,7 @@ public class House_ : MonoBehaviour
     public float risk;
     public float price;
     public int owner_id;
-    int type_id;
+    public int type_id;
     // Start is called before the first frame update
     void Start()
     {
