@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1137930864741632579}
   - component: {fileID: 5025057835456242395}
+  - component: {fileID: 1680811861645744439}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -58,6 +59,32 @@ MonoBehaviour:
   UI_Image_Picture_: {fileID: 0}
   UI_Text_Value_: {fileID: 0}
   UI_Text_Risk_: {fileID: 0}
+--- !u!61 &1680811861645744439
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137930864741632578}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5, y: 6.8367844}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 54.057976, y: 85.35127}
+  m_EdgeRadius: 0
 --- !u!1 &1137930865360383611
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +476,7 @@ GameObject:
   - component: {fileID: 8334899866730991491}
   - component: {fileID: 8572616407342880347}
   - component: {fileID: 4955536116273158491}
+  - component: {fileID: 5262982344209635685}
   m_Layer: 5
   m_Name: BG_Image
   m_TagString: Untagged
@@ -512,6 +540,32 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!61 &5262982344209635685
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4562566211277572892}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 72.684845, y: 80.49182}
+  m_EdgeRadius: 0
 --- !u!1 &4567708577927720881
 GameObject:
   m_ObjectHideFlags: 0
