@@ -1,19 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class WorldEvent_:MonoBehaviour
 {
     const float add_rate=0.2f;
     float[] add_rate_sep=new float[]{0.7f,0.2f,0.1f};
 
-    List<I_Event_> event_pool;
+    List<I_Event_> event_pool=new List<I_Event_>();
     void Start()
     {
         //initialize addcard events
         AddCards_[] _add_events=new AddCards_[3];
         for(int u=0;u!=3;++u)
         {
+            _add_events[u] = new AddCards_();
             _add_events[u].pro=add_rate*add_rate_sep[u];
             _add_events[u].AddCardAmount=u+1;
             event_pool.Add(_add_events[u]);
@@ -42,15 +43,32 @@ public class WorldEvent_:MonoBehaviour
         {
             if(cur<=choice&&choice<cur+event_pool[u].pro)
                 return event_pool[u];
+            cur+=event_pool[u].pro;
         }
         return null;
     }
-    string generateEvent()
+    public string generateEvent()
     {
         CardSystem cs=FindObjectOfType<CardSystem>();
         Land_[] lands=FindObjectsOfType<Land_>();
         I_Event_ _eve=getEvent();
         _eve.act(cs,lands);
         return _eve.event_msg;
+    }
+    IEnumerator UpdateText(float delaytime)
+    {
+        timelock=true;
+        string eve=generateEvent();
+        GetComponent<Text>().text=eve;
+        Debug.Log("update!!");
+        yield return new WaitForSeconds(delaytime);
+        timelock=false;
+    }
+    bool timelock=false;
+    void Update()
+    {
+        if(timelock==false)
+            StartCoroutine(UpdateText(1));
+            
     }
 }
