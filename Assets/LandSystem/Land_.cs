@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Land_ : MonoBehaviour
 {
-    List<House_> data;
+    public List<House_> data;
     const float cost_rate=3.0f;
     const float profit_rate=0.1f;
+    public float tmp_delta_explode_rate=0.0f;
     // Start is called before the first frame update
     Transform tf;
     void Start()
@@ -26,7 +27,7 @@ public class Land_ : MonoBehaviour
         {
             ret+=data[u].risk;
         }
-        return ret;
+        return ret+tmp_delta_explode_rate;
     }
     public void add_house(House_ house)
     {
