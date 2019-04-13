@@ -9,9 +9,12 @@ public class CardRefer : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     public GameObject gObj_BeingDrag_;
     public Vector2 v2_StartPosit_;
 
+    public Collider2D m_Collider_;
     public Image UI_Image_Picture_;
     public Text UI_Text_Value_;
     public Text UI_Text_Risk_;
+
+    public bool b_IsTouchPannel;
 
     public void PrintCard(int CardNumber, CardDataPool m_CardDataPool_)
     {
@@ -23,13 +26,7 @@ public class CardRefer : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
         UI_Text_Value_.text = ""+ m_CardDataPool_.CDPool_[CardNumber].int_Value_;
         UI_Text_Risk_.text = m_CardDataPool_.CDPool_[CardNumber].f_Risk_ + "%";
     }
-
-    public void OnMouseDown()
-    {
-        transform.position = Input.mousePosition;
-        Debug.Log("AA");
-    }
-
+    
     public void OnBeginDrag(PointerEventData eventData)
     {
         gObj_BeingDrag_ = gameObject;
@@ -39,14 +36,35 @@ public class CardRefer : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = Input.mousePosition;
-
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (b_IsTouchPannel)
+        {
+            UseThisCard();
+        }
+        else if (!b_IsTouchPannel)
+        {
+            transform.position = v2_StartPosit_;
+        }
         gObj_BeingDrag_ = null;
         v2_StartPosit_ = new Vector2(0, 0);
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+            b_IsTouchPannel = true;
+    }
 
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        b_IsTouchPannel = false;
+    }
+
+    void UseThisCard()
+    {
+        Debug.Log("Used");
+        Destroy(this.gameObject);
+    }
 }
