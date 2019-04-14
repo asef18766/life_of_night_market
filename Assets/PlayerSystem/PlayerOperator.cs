@@ -20,4 +20,10 @@ public class PlayerOperator : MonoBehaviour
     }
 
 
+    public void CheckLandAll()
+    {
+        targetFSM.SendEvent("CheckLandAll");
+    }
+
+
 }
