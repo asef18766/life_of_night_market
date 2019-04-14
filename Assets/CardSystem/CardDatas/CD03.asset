@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e56cceb6480d345bc929369860db88, type: 3}
   m_Name: CD03
   m_EditorClassIdentifier: 
-  int_Value_: 3
-  f_Risk_: 3
-  sprite_CardArt_: {fileID: 0}
+  int_Value_: 800
+  f_Risk_: 0.5
+  sprite_CardArt_: {fileID: 21300000, guid: a3206030257dd3643a299f7ac0882584, type: 3}
+  ptrite_CardName_: {fileID: 21300000, guid: 820e35bc3a7e0444b88b77dccd47bf16, type: 3}

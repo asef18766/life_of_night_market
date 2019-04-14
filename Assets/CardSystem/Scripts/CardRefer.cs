@@ -12,7 +12,10 @@ public class CardRefer : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     public Vector2 v2_StartPosit_;
 
     public Collider2D m_Collider_;
+
     public Image UI_Image_Picture_;
+    public Image UI_Image_Conbond_;
+
     public Text UI_Text_Value_;
     public Text UI_Text_Risk_;
 
@@ -25,6 +28,7 @@ public class CardRefer : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
 
         //從child抓UI
         UI_Image_Picture_ = transform.GetChild(0).GetComponent<Image>();
+        UI_Image_Conbond_ = transform.GetChild(2).GetComponent<Image>();
         UI_Text_Value_ = transform.GetChild(3).GetComponent<Text>();
         UI_Text_Risk_ = transform.GetChild(4).GetComponent<Text>();
 

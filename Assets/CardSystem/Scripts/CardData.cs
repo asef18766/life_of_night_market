@@ -8,4 +8,5 @@ public class CardData : ScriptableObject
     public int int_Value_;
     public float f_Risk_;
     public Sprite sprite_CardArt_;
+    public Sprite ptrite_CardName_;
 }
