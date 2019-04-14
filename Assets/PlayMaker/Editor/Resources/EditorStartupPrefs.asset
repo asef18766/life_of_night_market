@@ -14,13 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   welcomeScreenVersion: '1.9.0 '
   playmakerVersion: 
-<<<<<<< HEAD
-  showWelcomeScreen: 0
-  showUpgradeGuide: 0
-  lastAutoUpdateSignature: 2018.3.12f1__C:/Users/Lemino/Desktop/kgj/life_of_night_market/Assets__0.0.0.0
-=======
   showWelcomeScreen: 1
   showUpgradeGuide: 0
-  lastAutoUpdateSignature: 2018.3.12f1__D:/UnityProjz/KGJ19B/life_of_night_market/Assets__0.0.0.0
->>>>>>> c7dbfe86b2913c3799d8c3092ee0bc8fe0c2c6da
+  lastAutoUpdateSignature: 2018.3.12f1__C:/Users/Lemino/Desktop/kgj/life_of_night_market/Assets__0.0.0.0
   useLegacyNetworking: 0

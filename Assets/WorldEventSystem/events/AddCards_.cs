@@ -14,6 +14,6 @@ public class AddCards_:I_Event_
     {
         AddCardAmount=Random.Range(1,3);
         event_msg="台灣發大財!!!\n所有玩家增加"+AddCardAmount.ToString()+"張手卡";
-        //remain add feture
+        cs.EveryBodyDraw(AddCardAmount);
     }
 }

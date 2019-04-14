@@ -63,4 +63,11 @@ public class Land_ : MonoBehaviour
             data[u].transform.position=local_pos+(new Vector3(0.0f,0.5f+data[u].get_spirite_height(),-0.5f+(u+1)/(data.Count)));
         }
     }
+    public void add_house_by_id(int type_id,int owner_id)
+    {
+        House_ h=new House_();
+        h.type_id=type_id;
+        h.owner_id=owner_id;
+        add_house(h);
+    }
 }

@@ -6,12 +6,15 @@ public class DestoryHouseType_:I_Event_
 {
     public DestoryHouseType_()
     {
+        _h=new House_();
+        HOUSE_TYPE_AMOUNT=_h.HouseTypeAmount;
         DestoryType=Random.Range(1,HOUSE_TYPE_AMOUNT);
-        event_msg="市府查獲無良建商\n"+"(房屋名 id:"+DestoryType.ToString()+")"+"全數摧毀";
+        event_msg="市府查獲無良建商\n含有"+_h.getHousePhisicalName(DestoryType)+"之土地建物全數摧毀";
         
     }
     int DestoryType;
-    public int HOUSE_TYPE_AMOUNT=0;
+    House_ _h;
+    public int HOUSE_TYPE_AMOUNT;
     public override void act(CardSystem cs,Land_[] lands)
     {
         DestoryType=Random.Range(1,HOUSE_TYPE_AMOUNT);
