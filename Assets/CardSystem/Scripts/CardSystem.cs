@@ -16,6 +16,7 @@ public class CardSystem : MonoBehaviour
     public int i_thisTimeYouDraw_;
     public int i_PlayerIDNow_;
 
+    public PlayerOperator m_PlayerOperator_;
     public CardDataPool m_CDP_;
 
     public bool b_CanUseCard_ = false;
@@ -29,6 +30,9 @@ public class CardSystem : MonoBehaviour
         gObj_Yamafuda_.SetActive(false); 
         gObj_TefudaPannel_.SetActive(false);
         gObj_IfContinue_.SetActive(false);
+        
+        m_PlayerOperator_ = GameObject.Find("[PlayerOperator]").GetComponent<PlayerOperator>();
+        
 
         EveryBodyDraw(5);
     }
@@ -106,6 +110,7 @@ public class CardSystem : MonoBehaviour
         {
             Debug.Log("Check");
             Debug.Log("Finished");
+            m_PlayerOperator_.CheckLand();
             CanUseCard(true);
         }
         else if(!b_TorF_)
@@ -149,12 +154,14 @@ public class CardSystem : MonoBehaviour
     public void CanUseCard(bool IfTorF)
     {
         b_CanUseCard_ = IfTorF;
+        
     }
 
     //卡片操作結束
     public void CardPhaseEnd()
     {
         gObj_TefudaPannel_.SetActive(false);
-        Debug.Log("Dice");
+        Debug.Log("CardPhaseEnd");
+        m_PlayerOperator_.CardFinish();
     }
 }

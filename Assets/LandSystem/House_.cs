@@ -26,6 +26,8 @@ public class House_ : MonoBehaviour
             霜淇淋    ID 6    　價1800    危0.2
          */
         str=new string[HouseTypeAmount];
+        for(int u=0;u!=HouseTypeAmount;++u)
+            str[u]=new string("\0".ToCharArray());
         str[0]="大屌燒";
         str[1]="鹽水雞";
         str[2]="臭豆腐";
