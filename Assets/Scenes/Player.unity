@@ -6852,7 +6852,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: '{0:0}'
+          value: '$: {0:0}'
         - useVariable: 1
           name: m2
           tooltip: 
@@ -6864,7 +6864,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: '{0:0}'
+          value: '$: {0:0}'
         - useVariable: 1
           name: m3
           tooltip: 
@@ -6876,7 +6876,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: '{0:0}'
+          value: '$: {0:0}'
         - useVariable: 1
           name: m4
           tooltip: 
