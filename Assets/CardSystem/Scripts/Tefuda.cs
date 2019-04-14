@@ -10,6 +10,7 @@ public class Tefuda : MonoBehaviour
     public CardSystem m_CardSystem_;
     public int i_TefudaCountNow_;
     public int i_TefudaCountLast_;
+    public bool b_CanUseCard_;
 
     void Start()
     {
@@ -19,6 +20,8 @@ public class Tefuda : MonoBehaviour
 
     void Update()
     {
+        b_CanUseCard_ = m_CardSystem_.b_CanUseCard_;
+
         i_TefudaCountNow_ = transform.childCount;
         if(i_TefudaCountLast_ != i_TefudaCountNow_)
         {
