@@ -50,9 +50,26 @@ MonoBehaviour:
     objectVariables: []
     materialVariables: []
     textureVariables: []
-    arrayVariables: []
+    arrayVariables:
+    - useVariable: 1
+      name: PLAYER_STATUS
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      type: 0
+      objectTypeName: UnityEngine.Object
+      floatValues:
+      - 1
+      - 1
+      - 1
+      - 1
+      intValues: 
+      boolValues: 
+      stringValues: []
+      vector4Values: []
+      objectReferences: []
     enumVariables: []
     categories:
     - 
-    variableCategoryIDs: 00000000000000000000000000000000
+    variableCategoryIDs: 0000000000000000000000000000000000000000
   events: []

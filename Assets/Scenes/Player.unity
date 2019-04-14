@@ -3184,7 +3184,7 @@ MonoBehaviour:
     dataVersion: 2
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: Wait
+    startState: State 2
     states:
     - name: init
       description: 
@@ -3209,7 +3209,6 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.GetOwner
         - HutongGames.PlayMaker.Actions.FindGameObject
         - HutongGames.PlayMaker.Actions.GetComponent
         - HutongGames.PlayMaker.Actions.SetProperty
@@ -3219,19 +3218,12 @@ MonoBehaviour:
         - 
         - 
         - 
-        - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0101010101
-        actionStartIndex: 0000000001000000040000000700000009000000
-        actionHashCodes: 5c004505786b390204d814025ac852046ba59301
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000030000000600000008000000
+        actionHashCodes: 786b390204d814025ac852046ba59301
         unityObjectParams: []
         fsmGameObjectParams:
-        - useVariable: 1
-          name: '[PLAYER_MANAGER]'
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
         - useVariable: 1
           name: '[PlayerOperator]'
           tooltip: 
@@ -3367,7 +3359,7 @@ MonoBehaviour:
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            enumName: 
+            enumName: HutongGames.PlayMaker.None
             intValue: 0
           ArrayParameter:
             useVariable: 0
@@ -3376,7 +3368,7 @@ MonoBehaviour:
             showInInspector: 0
             networkSync: 0
             type: -1
-            objectTypeName: 
+            objectTypeName: UnityEngine.Object
             floatValues: []
             intValues: 
             boolValues: 
@@ -3471,9 +3463,8 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1300000012000000120000001300000014000000180000000100000024000000010000002900000010000000270000000100000017000000
+        paramDataType: 12000000120000001300000014000000180000000100000024000000010000002900000010000000270000000100000017000000
         paramName:
-        - storeGameObject
         - objectName
         - withTag
         - store
@@ -3487,8 +3478,8 @@ MonoBehaviour:
         - storeValue
         - everyFrame
         - indexOutOfRange
-        paramDataPos: 0000000000000000010000000100000000000000000000000000000000000000010000000000000000000000000000000200000000000000
-        paramByteDataSize: 0000000000000000000000000000000000000000000000000100000000000000010000000000000000000000000000000100000000000000
+        paramDataPos: 00000000010000000000000000000000000000000000000000000000010000000000000000000000000000000200000000000000
+        paramByteDataSize: 00000000000000000000000000000000000000000100000000000000010000000000000000000000000000000100000000000000
     - name: SwitchPlayer
       description: 
       colorIndex: 5
@@ -9584,6 +9575,67 @@ MonoBehaviour:
         - realTime
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000001000000
+    - name: State 2
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 386
+        y: 373
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetOwner
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 5c004505
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: '[PLAYER_MANAGER]'
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 13000000
+        paramName:
+        - storeGameObject
+        paramDataPos: 00000000
+        paramByteDataSize: 00000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -9606,13 +9658,24 @@ MonoBehaviour:
     - name: Go Event System
       isSystemEvent: 0
       isGlobal: 0
+    - name: INIT
+      isSystemEvent: 0
+      isGlobal: 0
     - name: Move End
       isSystemEvent: 0
       isGlobal: 0
     - name: next
       isSystemEvent: 0
       isGlobal: 0
-    globalTransitions: []
+    globalTransitions:
+    - fsmEvent:
+        name: INIT
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: Wait
+      linkStyle: 0
+      linkConstraint: 0
+      colorIndex: 0
     variables:
       floatVariables:
       - useVariable: 1

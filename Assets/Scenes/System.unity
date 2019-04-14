@@ -153,7 +153,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 66
-        y: 164
+        y: 180
         width: 100
         height: 32
       isBreakpoint: 0
@@ -286,7 +286,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 55
-        y: 293.02344
+        y: 309.02344
         width: 100
         height: 32
       isBreakpoint: 0
@@ -297,7 +297,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Player
+        toState: State 4
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -418,8 +418,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 236
-        y: 163
+        x: 244
+        y: 117
         width: 100
         height: 32
       isBreakpoint: 0
@@ -430,7 +430,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: State 4
+        toState: Stage
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -551,8 +551,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 252
-        y: 285
+        x: 234
+        y: 322
         width: 100
         height: 16
       isBreakpoint: 0
@@ -653,8 +653,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 63
-        y: 106.99219
+        x: 61
+        y: 102.99219
         width: 100
         height: 32
       isBreakpoint: 0
@@ -665,7 +665,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Stage
+        toState: Player
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -714,7 +714,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 60.5
-        y: 226.00781
+        y: 242.00781
         width: 100
         height: 32
       isBreakpoint: 0
