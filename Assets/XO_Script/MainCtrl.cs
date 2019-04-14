@@ -20,7 +20,7 @@ public class MainCtrl : MonoBehaviour
        
     }
 
-    void RoundEnd() {
+   public  void RoundEnd() {
         
         float[] sss = getPlayerTotalEarn();
         for (int i = 0; i < sss.Length; i++)
