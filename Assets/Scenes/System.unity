@@ -164,7 +164,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Card
+        toState: Event
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -285,8 +285,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 62
-        y: 229
+        x: 55
+        y: 293.02344
         width: 100
         height: 32
       isBreakpoint: 0
@@ -297,7 +297,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Event
+        toState: Player
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -713,8 +713,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 62.5
-        y: 287.0078
+        x: 60.5
+        y: 226.00781
         width: 100
         height: 32
       isBreakpoint: 0
@@ -725,7 +725,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Player
+        toState: Card
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0

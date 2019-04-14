@@ -54,9 +54,10 @@ public class CardSystem : MonoBehaviour
     }
 
     //玩家回合開始叫我
-    public void TurnStart(int PlayerID, Land_ tempt_Land_)
+    public void TurnStart(int PlayerID, GameObject tempt_Land_)
     {
-        m_ThisPlayerLand_ = tempt_Land_;
+        Debug.Log("AA");
+        m_ThisPlayerLand_ = tempt_Land_.GetComponent<Land_>();
         i_PlayerIDNow_ = PlayerID - 1;
         ShowYamafuda();
         ShowTefuda(i_PlayerIDNow_);
