@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Land_ : MonoBehaviour
 {
+    public House_ house;
     public List<House_> data;
     const float cost_rate=3.0f;
     const float profit_rate=0.1f;
@@ -18,6 +19,11 @@ public class Land_ : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(debug)
+        {
+            add_house_by_id(1,1);
+            debug=false;
+        }
         update_house_pos();
     }
     public float get_risk()
@@ -31,7 +37,7 @@ public class Land_ : MonoBehaviour
     }
     public void add_house(House_ house)
     {
-        //Instantiate()
+        Instantiate(house,new Vector3(0,0,0),new Quaternion());
         data.Add(house);
     }
     public float explode()
@@ -54,8 +60,11 @@ public class Land_ : MonoBehaviour
     }
     void clear_house()
     {
+        for(int u=0;u!=data.Count;++u)
+            Destroy(data[u]);
         data.Clear();
     }
+    bool debug=true;
     void update_house_pos()
     {
         Vector3 local_pos=tf.position;
