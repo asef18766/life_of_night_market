@@ -34,7 +34,6 @@ public class WorldEvent_ : MonoBehaviour
         DestoryHouseType_ _dht_event = new DestoryHouseType_();
         _dht_event.pro = 0.05f;
         event_pool.Add(_dht_event);
-        timelock = true;
     }
     I_Event_ getEvent()
     {
