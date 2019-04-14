@@ -11,14 +11,9 @@ public class WorldEvent_ : MonoBehaviour
     void Start()
     {
         //initialize addcard events
-        AddCards_[] _add_events = new AddCards_[3];
-        for (int u = 0; u != 3; ++u)
-        {
-            _add_events[u] = new AddCards_();
-            _add_events[u].pro = add_rate * add_rate_sep[u];
-            _add_events[u].AddCardAmount = u + 1;
-            event_pool.Add(_add_events[u]);
-        }
+        AddCards_ _add_events = new AddCards_();
+        _add_events.pro=0.2f;
+        event_pool.Add(_add_events);
 
         //initialize add destory rate events
         AddRate_ _adr_event = new AddRate_();
@@ -59,6 +54,8 @@ public class WorldEvent_ : MonoBehaviour
     {
         string eve = generateEvent();
         GetComponent<Text>().text = eve;
+        FindObjectOfType<PlayerOperator>().CheckLandAll();
+        GetComponent<Text>().text ="";
     }
     void Update()
     {
