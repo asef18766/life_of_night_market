@@ -19,11 +19,7 @@ public class Land_ : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(debug)
-        {
-            add_house_by_id(1,1);
-            debug=false;
-        }
+        
         update_house_pos();
     }
     public float get_risk()
@@ -59,13 +55,18 @@ public class Land_ : MonoBehaviour
             Destroy(data[u]);
         data.Clear();
     }
-    bool debug=true;
     void update_house_pos()
     {
         Vector3 local_pos=tf.position;
         for(int u=0;u!=data.Count;++u)
         {
-            data[u].transform.position=local_pos+(new Vector3(0.0f,0.5f+data[u].get_spirite_height(),-0.5f+(u+1)/(data.Count)));
+            
+            SpriteRenderer spr=data[u].GetComponent<SpriteRenderer>();
+            Vector3 sprite_bounds=spr.bounds.size;
+            float dc=data.Count+1.0f;
+            float sep=u+1.0f;
+            Vector3 delta=new Vector3(0,sprite_bounds.y/2,-0.5f+(1.0f/dc)*sep);
+            data[u].transform.position=local_pos+delta;
         }
     }
     public void add_house_by_id(int type_id,int owner_id)

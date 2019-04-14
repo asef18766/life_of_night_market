@@ -11,6 +11,7 @@ public class House_ : MonoBehaviour
     public const int HouseTypeAmount=6;
     static float[] t_price;
     static float[] t_risk;
+    public CardDataPool cdp;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +60,8 @@ public class House_ : MonoBehaviour
         {
             risk=t_risk[type_id-1];
             price=t_price[type_id-1];
+            GetComponent<SpriteRenderer>().sprite=cdp.CDPool_[type_id].sprite_CardArt_;
+            GetComponent<Transform>().localScale=new Vector3(0.2f,0.2f,1.0f);
         }
     }
     public string getHousePhisicalName(int type)

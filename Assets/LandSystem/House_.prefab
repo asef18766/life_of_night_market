@@ -47,6 +47,9 @@ MonoBehaviour:
   risk: 0
   price: 0
   owner_id: 0
+  type_id: 0
+  str: []
+  cdp: {fileID: 11400000, guid: 8cb5133a6cd4bcb4384d4ea3761a7274, type: 2}
 --- !u!212 &7803658563204111874
 SpriteRenderer:
   m_ObjectHideFlags: 0
