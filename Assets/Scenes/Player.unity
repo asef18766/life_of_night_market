@@ -13617,7 +13617,7 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 1
-          name: PlayerTarget
+          name: player.index
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -14672,6 +14672,14 @@ MonoBehaviour:
         isSystemEvent: 0
         isGlobal: 0
       toState: Target as ID
+      linkStyle: 0
+      linkConstraint: 0
+      colorIndex: 0
+    - fsmEvent:
+        name: TEST
+        isSystemEvent: 0
+        isGlobal: 0
+      toState: Get Earns
       linkStyle: 0
       linkConstraint: 0
       colorIndex: 0
