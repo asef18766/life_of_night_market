@@ -55,6 +55,8 @@ public class House_ : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        for(int u=0;u!=HouseTypeAmount;++u)
+            Debug.Log("str["+u.ToString()+"]:"+str[u]);
         if(type_id>=1&&type_id<=HouseTypeAmount)
         {
             risk=t_risk[type_id-1];
