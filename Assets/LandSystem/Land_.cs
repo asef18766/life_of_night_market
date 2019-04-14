@@ -31,7 +31,7 @@ public class Land_ : MonoBehaviour
     }
     public void add_house(House_ house)
     {
-        Instantiate()
+        //Instantiate()
         data.Add(house);
     }
     public float explode()
