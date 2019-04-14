@@ -53,17 +53,13 @@ MonoBehaviour:
     arrayVariables:
     - useVariable: 1
       name: PLAYER_STATUS
-      tooltip: 
+      tooltip: "0:\u7834\u7522 1:\u73A9\u5BB6 2:\u96FB\u8166"
       showInInspector: 0
       networkSync: 0
-      type: 0
+      type: 1
       objectTypeName: UnityEngine.Object
-      floatValues:
-      - 1
-      - 1
-      - 1
-      - 1
-      intValues: 
+      floatValues: []
+      intValues: 01000000010000000100000001000000
       boolValues: 
       stringValues: []
       vector4Values: []
