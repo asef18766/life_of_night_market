@@ -48,7 +48,7 @@ public class CardRefer : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
         }
         else if (!b_IsTouchPannel)
         {
-            transform.position = v2_StartPosit_;
+        //    transform.position = v2_StartPosit_;
         }
         gObj_BeingDrag_ = null;
         v2_StartPosit_ = new Vector2(0, 0);
