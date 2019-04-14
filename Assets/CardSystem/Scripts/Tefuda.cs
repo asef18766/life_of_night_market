@@ -32,7 +32,7 @@ public class Tefuda : MonoBehaviour
         }
     }
 
-    void RefreshCardPosit()
+    public void RefreshCardPosit()
     {
         for (int i = 0; i < i_TefudaCountNow_; i++)
         {
