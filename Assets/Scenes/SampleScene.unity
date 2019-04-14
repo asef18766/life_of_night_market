@@ -38,15 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.12731703, g: 0.13414727, b: 0.12107852, a: 1}
-=======
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
->>>>>>> 7f872135e8e40bcc9b6ce90955f179074c79a783
-=======
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
->>>>>>> parent of 7f87213... 安裝AMS 讓所有場景強制同期化 不再有讀入順序問題 也可以在編輯模式下跨場景做參照引用
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -725,8 +717,6 @@ MonoBehaviour:
   - {fileID: 1523906311}
   - {fileID: 857772940}
   - {fileID: 766428387}
-<<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!1001 &1316124532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -796,73 +786,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48a28e5cfdcba39449235dddb1a85c8e, type: 3}
-=======
---- !u!1 &1229390640
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1229390642}
-  - component: {fileID: 1229390641}
-  - component: {fileID: 1229390643}
-  m_Layer: 0
-  m_Name: '! AmsMultiSceneSetup'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1229390641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229390640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 085c2289556c08443b40563cfe8016e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _isMainScene: 0
-  _sceneSetup: []
-  _thisScenePath: Assets/Scenes/SampleScene.unity
---- !u!4 &1229390642
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229390640}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1229390643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229390640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15cc1e8a133b04c4ba5d1c4801149eaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _version: 2
-  _crossSceneReferences: []
-  _realSceneRootsForPostBuild: []
-  _mergedScenes: []
->>>>>>> 7f872135e8e40bcc9b6ce90955f179074c79a783
-=======
->>>>>>> parent of 7f87213... 安裝AMS 讓所有場景強制同期化 不再有讀入順序問題 也可以在編輯模式下跨場景做參照引用
 --- !u!1 &1446781712
 GameObject:
   m_ObjectHideFlags: 0
