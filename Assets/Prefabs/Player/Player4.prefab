@@ -7191,6 +7191,21 @@ PrefabInstance:
       propertyPath: fsm.handleLateUpdate
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6318359760204196219, guid: 63240a22fb61fcc4dabbf4ff727b8eb3,
+        type: 3}
+      propertyPath: fsm.states.Array.data[9].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318359760204196219, guid: 63240a22fb61fcc4dabbf4ff727b8eb3,
+        type: 3}
+      propertyPath: fsm.states.Array.data[11].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318359760204196219, guid: 63240a22fb61fcc4dabbf4ff727b8eb3,
+        type: 3}
+      propertyPath: fsm.states.Array.data[15].actionData.fsmEventTargetParams.Array.data[0].gameObject.gameObject.value
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3596191772146083801, guid: 63240a22fb61fcc4dabbf4ff727b8eb3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
