@@ -8,7 +8,7 @@ public class CardSystem : MonoBehaviour
     public GameObject gObj_Tefuda_;
     public GameObject Prefab_Card_;
     //[玩家,手持卡片序號]
-    public int[] i_WhoseCardCount_;
+    public string[] i_PlayersTefuda_ = new string[4];
     public int i_thisTimeYouDraw_;
     public CardDataPool m_CDP_;
 
@@ -34,7 +34,7 @@ public class CardSystem : MonoBehaviour
         Instantiate(Prefab_Card_, gObj_Tefuda_.transform);
     }
 
-    public void UsingCard()
+    public void UsingCard(int CardID_)
     {
 
     }

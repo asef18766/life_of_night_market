@@ -14,6 +14,7 @@ public class CardRefer : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     public Text UI_Text_Value_;
     public Text UI_Text_Risk_;
 
+    public int i_CardNumber_;
     public bool b_IsTouchPannel;
 
     public void PrintCard(int CardNumber, CardDataPool m_CardDataPool_)
@@ -22,6 +23,7 @@ public class CardRefer : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
         UI_Text_Value_ = transform.GetChild(3).GetComponent<Text>();
         UI_Text_Risk_ = transform.GetChild(4).GetComponent<Text>();
 
+        i_CardNumber_ = CardNumber;
         UI_Image_Picture_.sprite = m_CardDataPool_.CDPool_[CardNumber].sprite_CardArt_;
         UI_Text_Value_.text = ""+ m_CardDataPool_.CDPool_[CardNumber].int_Value_;
         UI_Text_Risk_.text = m_CardDataPool_.CDPool_[CardNumber].f_Risk_ + "%";
@@ -64,7 +66,7 @@ public class CardRefer : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
 
     void UseThisCard()
     {
-        Debug.Log("Used");
+        GameObject.Find("CardSystem").GetComponent<CardSystem>().UsingCard(i_CardNumber_);
         Destroy(this.gameObject);
     }
 }
