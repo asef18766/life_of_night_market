@@ -7,8 +7,8 @@ public class House_ : MonoBehaviour
     public float price;
     public int owner_id;
     public int type_id;
-    static string[] str;
-    public int HouseTypeAmount=6;
+    public string[] str;
+    public const int HouseTypeAmount=6;
     static float[] t_price;
     static float[] t_risk;
     // Start is called before the first frame update

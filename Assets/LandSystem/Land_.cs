@@ -35,11 +35,6 @@ public class Land_ : MonoBehaviour
         }
         return ret+tmp_delta_explode_rate;
     }
-    public void add_house(House_ house)
-    {
-        Instantiate(house,new Vector3(0,0,0),new Quaternion());
-        data.Add(house);
-    }
     public float explode()
     {
         float ret=0.0f;
@@ -75,9 +70,9 @@ public class Land_ : MonoBehaviour
     }
     public void add_house_by_id(int type_id,int owner_id)
     {
-        House_ h=new House_();
+        House_ h=Instantiate(house,new Vector3(0,0,0),new Quaternion());
         h.type_id=type_id;
         h.owner_id=owner_id;
-        add_house(h);
+        data.Add(h);
     }
 }
