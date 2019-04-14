@@ -16,7 +16,10 @@ public class CardSystem : MonoBehaviour
     public int i_thisTimeYouDraw_;
     public int i_PlayerIDNow_;
 
+    public PlayerOperator m_PlayerOperator_;
     public CardDataPool m_CDP_;
+    public Tefuda m_Tefuda_;
+    public Land_ m_ThisPlayerLand_;
 
     public bool b_CanUseCard_ = false;
 
@@ -30,6 +33,8 @@ public class CardSystem : MonoBehaviour
         gObj_TefudaPannel_.SetActive(false);
         gObj_IfContinue_.SetActive(false);
 
+        m_PlayerOperator_ = GameObject.Find("[PlayerOperator]").GetComponent<PlayerOperator>();
+        
         EveryBodyDraw(5);
     }
 
@@ -43,14 +48,15 @@ public class CardSystem : MonoBehaviour
             //抽給他i_DrawCount_張
             for (int n = 0; n < i_DrawCount_; n++)
             {
-                s_PlayersTefuda_[i] += Random.Range(0, i_Cards_) + " ";
+                s_PlayersTefuda_[i] += Random.Range(1, i_Cards_) + " ";
             }
         }
     }
 
     //玩家回合開始叫我
-    public void TurnStart(int PlayerID)
+    public void TurnStart(int PlayerID, Land_ tempt_Land_)
     {
+        m_ThisPlayerLand_ = tempt_Land_;
         i_PlayerIDNow_ = PlayerID - 1;
         ShowYamafuda();
         ShowTefuda(i_PlayerIDNow_);
@@ -65,12 +71,17 @@ public class CardSystem : MonoBehaviour
     //抽卡！
     public void DrawCard()
     {
-        //抽起乃
-        int i = m_CDP_.CDPool_.ToArray().Length;
-        i_thisTimeYouDraw_ = Random.Range(0, i);
-        s_PlayersTefuda_[i_PlayerIDNow_] += i_thisTimeYouDraw_ + " ";
-        ShowTefuda(i_PlayerIDNow_);
-
+        if (i_ThisPlayersTefuda_.Length < 8)
+        {
+            //抽起乃
+            int i = m_CDP_.CDPool_.ToArray().Length;
+            i_thisTimeYouDraw_ = Random.Range(1, i);
+            s_PlayersTefuda_[i_PlayerIDNow_] += i_thisTimeYouDraw_ + " ";
+            ShowTefuda(i_PlayerIDNow_);
+        }else if(i_ThisPlayersTefuda_.Length >= 8)
+        {
+            Debug.Log("Full");
+        }
         //進入出牌階段
         CanUseCard(true);
 
@@ -82,6 +93,8 @@ public class CardSystem : MonoBehaviour
     public void UsingCard(int CardID_)
     {
         Debug.Log("Build CardID: "+ CardID_);
+
+        m_ThisPlayerLand_.add_house_by_id(CardID_, i_PlayerIDNow_+1);
         
         //清除資料
         s_PlayersTefuda_[i_PlayerIDNow_] = s_PlayersTefuda_[i_PlayerIDNow_].Substring(0,s_PlayersTefuda_[i_PlayerIDNow_].Length-2);
@@ -106,6 +119,7 @@ public class CardSystem : MonoBehaviour
         {
             Debug.Log("Check");
             Debug.Log("Finished");
+            m_PlayerOperator_.CheckLand();
             CanUseCard(true);
         }
         else if(!b_TorF_)
@@ -144,17 +158,20 @@ public class CardSystem : MonoBehaviour
             gObj_TefudaNowShowing_[i] = Instantiate(Prefab_Card_, gObj_TefudaPannel_.transform);
             gObj_TefudaNowShowing_[i].GetComponent<CardRefer>().PrintCard(i_ThisPlayersTefuda_[i], m_CDP_);
         }
+        gObj_TefudaPannel_.SendMessage("RefreshCardPosit");
     }
 
     public void CanUseCard(bool IfTorF)
     {
         b_CanUseCard_ = IfTorF;
+        
     }
 
     //卡片操作結束
     public void CardPhaseEnd()
     {
         gObj_TefudaPannel_.SetActive(false);
-        Debug.Log("Dice");
+        Debug.Log("CardPhaseEnd");
+        m_PlayerOperator_.CardFinish();
     }
 }

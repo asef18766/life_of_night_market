@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e56cceb6480d345bc929369860db88, type: 3}
   m_Name: CD06
   m_EditorClassIdentifier: 
-  int_Value_: 6
-  f_Risk_: 6
-  sprite_CardArt_: {fileID: 0}
+  int_Value_: 1800
+  f_Risk_: 0.2
+  sprite_CardArt_: {fileID: 21300000, guid: 1f7a61099fc4eaf4ba06c52d48b6b23f, type: 3}
+  ptrite_CardName_: {fileID: 21300000, guid: 936bdac55dfa74740beb7a652be9ba90, type: 3}

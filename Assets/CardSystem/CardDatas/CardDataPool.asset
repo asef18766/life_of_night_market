@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CardDataPool
   m_EditorClassIdentifier: 
   CDPool_:
+  - {fileID: 0}
   - {fileID: 11400000, guid: eb66dfec40855c942a3f5962a2314ceb, type: 2}
   - {fileID: 11400000, guid: a827bd688a7f5fb4ab69c8e79c0d37a8, type: 2}
   - {fileID: 11400000, guid: 1a7b25aa619876e4981ee454aa66dad4, type: 2}
