@@ -11,6 +11,7 @@ public class Tefuda : MonoBehaviour
     public int i_TefudaCountNow_;
     public int i_TefudaCountLast_;
     public bool b_CanUseCard_;
+    public Transform[] trans_CardPosit_ = new Transform[9];
 
     void Start()
     {
@@ -20,36 +21,22 @@ public class Tefuda : MonoBehaviour
 
     void Update()
     {
+        //隨時更新能不能出牌
         b_CanUseCard_ = m_CardSystem_.b_CanUseCard_;
-
+        
+        //隨時更新現在手牌數，若有更新會整理手牌位置
         i_TefudaCountNow_ = transform.childCount;
         if(i_TefudaCountLast_ != i_TefudaCountNow_)
         {
-            //RefreshCardPosit();
+            RefreshCardPosit();
         }
-    }
-
-    void ShowUp()
-    {
-
     }
 
     void RefreshCardPosit()
     {
-        if (i_TefudaCountNow_ % 2 == 0)
+        for (int i = 0; i < i_TefudaCountNow_; i++)
         {
-            for (int i = 0; i < i_TefudaCountNow_; i++)
-            {
-                transform.GetChild(i).transform.position =  new Vector2(transform.GetChild(i).transform.position.x + (-1^i)*i,0);
-                //transform.GetChild(i).GetComponent<RectTransform>().position = new Vector2((1 + Mathf.Round(i / 2)) * (-1 ^ i) * f_CardInter_, 0);
-            }
-        }
-        else
-        {
-            for (int i = 0; i < i_TefudaCountNow_; i++)
-            {
-                transform.GetChild(i).transform.position = new Vector2((Mathf.Round(i / 2)) * (-1 ^ i) * f_CardInter_, 0);
-            }
+            transform.GetChild(i).transform.position = trans_CardPosit_[i].position;
         }
         i_TefudaCountLast_ = i_TefudaCountNow_;
     }
