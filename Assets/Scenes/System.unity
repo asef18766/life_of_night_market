@@ -553,6 +553,7 @@ MonoBehaviour:
         serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         x: 56
         y: 367
 =======
@@ -563,6 +564,10 @@ MonoBehaviour:
         x: 393
         y: 398
 >>>>>>> parent of 7f87213... 安裝AMS 讓所有場景強制同期化 不再有讀入順序問題 也可以在編輯模式下跨場景做參照引用
+=======
+        x: 234
+        y: 322
+>>>>>>> parent of 37e225a... 因應Player改成最早讀入進行初始化順序調整
         width: 100
         height: 16
       isBreakpoint: 0
