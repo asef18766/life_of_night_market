@@ -48,7 +48,7 @@ public class WorldEvent_ : MonoBehaviour
         }
         return null;
     }
-    public string generateEvent()
+    string generateEvent()
     {
         CardSystem cs = FindObjectOfType<CardSystem>();
         Land_[] lands = FindObjectsOfType<Land_>();
@@ -56,18 +56,13 @@ public class WorldEvent_ : MonoBehaviour
         _eve.act(cs, lands);
         return _eve.event_msg;
     }
-    void UpdateText()
+    public void UpdateText()
     {
-        timelock = true;
         string eve = generateEvent();
         GetComponent<Text>().text = eve;
     }
-    public bool timelock = true;
     void Update()
     {
-        Debug.Log(timelock);
-        if (timelock == false)
-            UpdateText();
 
     }
 }
