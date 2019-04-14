@@ -6,11 +6,14 @@ public class AddCards_:I_Event_
 {
     public AddCards_()
     {
-        event_msg="AddCards";
+        AddCardAmount=Random.Range(1,3);
+        event_msg="台灣發大財!!!\n所有玩家增加"+AddCardAmount.ToString()+"張手卡";
     }
     public int AddCardAmount=0;
     public override void act(CardSystem cs,Land_[] lands)
     {
-        //remain add feture
+        AddCardAmount=Random.Range(1,3);
+        event_msg="台灣發大財!!!\n所有玩家增加"+AddCardAmount.ToString()+"張手卡";
+        cs.EveryBodyDraw(AddCardAmount);
     }
 }
