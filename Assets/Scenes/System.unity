@@ -152,8 +152,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 234
-        y: 179
+        x: 66
+        y: 180
         width: 100
         height: 32
       isBreakpoint: 0
@@ -285,8 +285,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 236
-        y: 308.02344
+        x: 55
+        y: 309.02344
         width: 100
         height: 32
       isBreakpoint: 0
@@ -297,7 +297,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Call INIT
+        toState: State 4
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -546,13 +546,18 @@ MonoBehaviour:
         - sceneNotFoundEvent
         paramDataPos: 00000000000000000000000000000000000000000100000002000000000000000100000002000000000000000100000002000000
         paramByteDataSize: 04000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    - name: Call INIT
+    - name: State 4
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 56
         y: 367
+=======
+        x: 234
+        y: 322
+>>>>>>> parent of 37e225a... 因應Player改成最早讀入進行初始化順序調整
         width: 100
         height: 16
       isBreakpoint: 0
@@ -575,7 +580,7 @@ MonoBehaviour:
         functionCallParams: []
         fsmTemplateControlParams: []
         fsmEventTargetParams:
-        - target: 4
+        - target: 1
           excludeSelf:
             useVariable: 0
             name: 
@@ -584,10 +589,10 @@ MonoBehaviour:
             networkSync: 0
             value: 0
           gameObject:
-            ownerOption: 0
+            ownerOption: 1
             gameObject:
-              useVariable: 0
-              name: 
+              useVariable: 1
+              name: '[PLAYER_MANAGER]'
               tooltip: 
               showInInspector: 0
               networkSync: 0
@@ -713,8 +718,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 239.5
-        y: 244.00781
+        x: 60.5
+        y: 242.00781
         width: 100
         height: 32
       isBreakpoint: 0

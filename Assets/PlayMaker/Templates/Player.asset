@@ -2433,9 +2433,6 @@ MonoBehaviour:
     - name: CheckLand
       isSystemEvent: 0
       isGlobal: 0
-    - name: INIT
-      isSystemEvent: 0
-      isGlobal: 0
     - name: MOVE
       isSystemEvent: 0
       isGlobal: 0
@@ -2465,14 +2462,6 @@ MonoBehaviour:
         isSystemEvent: 0
         isGlobal: 0
       toState: check Way
-      linkStyle: 0
-      linkConstraint: 0
-      colorIndex: 0
-    - fsmEvent:
-        name: INIT
-        isSystemEvent: 0
-        isGlobal: 0
-      toState: State 1
       linkStyle: 0
       linkConstraint: 0
       colorIndex: 0
