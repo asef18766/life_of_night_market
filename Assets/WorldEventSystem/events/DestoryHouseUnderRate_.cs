@@ -10,15 +10,15 @@ public class DestoryHouseUnderRate_:I_Event_
     public DestoryHouseUnderRate_()
     {
         rate_barrier=Random.Range(min_rate,max_rate);
-        event_msg="驚報!!水泥公司使用海砂!!\n爆炸機率"+rate_barrier.ToString()+"%以下土地房屋全毀";
+        event_msg="驚報!!水泥公司使用海砂!!\n爆炸機率"+((int)(rate_barrier/0.01f)).ToString()+"%以下土地房屋全毀";
     }
     public override void act(CardSystem cs,Land_[] lands)
     {
         rate_barrier=Random.Range(min_rate,max_rate);
-        event_msg="驚報!!水泥公司使用海砂!!\n爆炸機率"+rate_barrier.ToString()+"%以下土地房屋全毀";
+        event_msg="驚報!!水泥公司使用海砂!!\n爆炸機率"+((int)(rate_barrier/0.01f)).ToString()+"%以下土地房屋全毀";
         for(int u=0;u!=lands.Length;++u)
         {
-            if(lands[u].get_risk()<rate_barrier)
+            if(lands[u].get_risk()<rate_barrier&&lands[u].data.Count!=0)
                 lands[u].data[0].risk=1.0f;
         }
     }

@@ -24,15 +24,15 @@ public class DestoryHouseType_:I_Event_
         str[4]="冬瓜茶";
         str[5]="霜淇淋";
         HOUSE_TYPE_AMOUNT=House_.HouseTypeAmount;
-        DestoryType=Random.Range(1,HOUSE_TYPE_AMOUNT);
+        DestoryType=Random.Range(1,HOUSE_TYPE_AMOUNT+1);
         event_msg="市府查獲無良建商\n含有"+getHousePhisicalName(DestoryType)+"之土地建物全數摧毀";
     }
     int DestoryType;
     public int HOUSE_TYPE_AMOUNT;
     public override void act(CardSystem cs,Land_[] lands)
     {
-        DestoryType=Random.Range(1,HOUSE_TYPE_AMOUNT);
-        event_msg="市府查獲無良建商\n含有"+getHousePhisicalName(DestoryType)+"之土地建物全數摧毀";
+        DestoryType=Random.Range(1,HouseTypeAmount+1);
+        event_msg="市府查獲無良建商\n含有"+getHousePhisicalName(DestoryType-1)+"之土地建物全數摧毀";
         for(int u=0;u!=lands.Length;++u)
         {
             for(int i=0;i!=lands[u].data.Count;++i)
@@ -40,7 +40,6 @@ public class DestoryHouseType_:I_Event_
                 if(lands[u].data[i].type_id==DestoryType)
                 {
                     lands[u].data[i].risk=1.0f;
-                    break;
                 }
             }
         }

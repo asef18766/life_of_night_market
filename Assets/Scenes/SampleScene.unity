@@ -746,7 +746,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isMainScene: 1
-  _sceneSetup: []
+  _sceneSetup:
+  - scene:
+      editorAssetGUID: c373e68e3c052164aa59710b75d5c405
+      name: Player
+      _path: Assets/Scenes/Player.unity
+    loadInEditor: 1
+    loadMethod: 1
+  - scene:
+      editorAssetGUID: 2f68506d7af74c44aa1f7e2e616e38de
+      name: Stage
+      _path: Assets/Scenes/Stage.unity
+    loadInEditor: 1
+    loadMethod: 1
+  - scene:
+      editorAssetGUID: 3f1fbc789f125e94091a789d2d77df53
+      name: Card
+      _path: Assets/CardSystem/Card.unity
+    loadInEditor: 1
+    loadMethod: 1
+  - scene:
+      editorAssetGUID: fe53a969ed12bcc45b803db6a7691488
+      name: SampleScene
+      _path: Assets/Scenes/SampleScene.unity
+    loadInEditor: 1
+    loadMethod: 1
   _thisScenePath: Assets/Scenes/SampleScene.unity
 --- !u!4 &1018236229
 Transform:
