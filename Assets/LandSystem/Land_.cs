@@ -19,7 +19,15 @@ public class Land_ : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.S))
+            add_house_by_id(1,1);
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            Debug.Log("gain profit");
+            DeltaMoney_[] dm=gain_profit();
+           
+            Debug.Log(dm.Length.ToString());
+        }
         update_house_pos();
     }
     public float get_risk()
@@ -42,6 +50,10 @@ public class Land_ : MonoBehaviour
     public DeltaMoney_[] gain_profit()
     {
         DeltaMoney_[] ret=new DeltaMoney_[data.Count];
+        for(int u=0;u!=ret.Length;++u)
+        {
+            ret[u]=new DeltaMoney_();
+        }
         for(int u=0;u!=data.Count;++u)
         {
             ret[u].owner_id=data[u].owner_id;
@@ -52,7 +64,7 @@ public class Land_ : MonoBehaviour
     void clear_house()
     {
         for(int u=0;u!=data.Count;++u)
-            Destroy(data[u]);
+            DestroyImmediate(data[u].gameObject);
         data.Clear();
     }
     void update_house_pos()

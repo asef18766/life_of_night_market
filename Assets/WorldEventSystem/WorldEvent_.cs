@@ -44,21 +44,33 @@ public class WorldEvent_ : MonoBehaviour
     }
     string generateEvent()
     {
+        Debug.Log("event generate");
         CardSystem cs = FindObjectOfType<CardSystem>();
         Land_[] lands = FindObjectsOfType<Land_>();
         I_Event_ _eve = getEvent();
         _eve.act(cs, lands);
         return _eve.event_msg;
     }
+    bool timeblock=true;
+    IEnumerator timer()
+    {
+        yield return new WaitForSeconds(2);
+        GetComponent<Text>().text="";
+        timeblock=true;
+    }
     public void UpdateText()
     {
         string eve = generateEvent();
         GetComponent<Text>().text = eve;
         FindObjectOfType<PlayerOperator>().CheckLandAll();
-        GetComponent<Text>().text ="";
+        timeblock=false;
+
     }
     void Update()
     {
-
+        if(timeblock!=true)
+        {
+            StartCoroutine("timer");
+        }
     }
 }
